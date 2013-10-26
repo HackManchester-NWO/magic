@@ -6,7 +6,7 @@ app.get('/', function(request, response) {
   response.send('Hello World!!!!');
 });
 
-app.get('/in/', function(request, response) {
+app.get('/in', function(request, response) {
   response.send('Hello SMS');
 });
 
