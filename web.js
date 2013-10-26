@@ -3,11 +3,13 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  response.send('Hello World!!!!');
+	response.writeHead(200, {"Content-Type": "text/plain"});
+	response.send('Hello World!!!!');
 });
 
 app.get('/in', function(request, response) {
-  response.send('Hello SMS');
+	response.writeHead(200, {"Content-Type": "text/plain"});
+	response.send('Hello SMS');
 });
 
 var port = process.env.PORT || 80;
