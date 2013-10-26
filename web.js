@@ -3,12 +3,10 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-	response.writeHead(200, {"Content-Type": "text/plain"});
 	response.send('Hello World!!!!');
 });
 
 app.get('/in', function(request, response) {
-	response.writeHead(200, {"Content-Type": "text/plain"});
 	response.send('Hello SMS');
 });
 
