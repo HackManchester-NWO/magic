@@ -10,8 +10,8 @@ app.get('/', function(request, response) {
 
 app.get('/in', function(request, response) {
 	var sentTextBody  = "Nothing :(";
-	if (req.query.Content) {
-		sentTextBody = req.query.Content
+	if (request.query.Content) {
+		sentTextBody = request.query.Content
 	}
 	var options = {
 	  host: 'api.clockworksms.com',
