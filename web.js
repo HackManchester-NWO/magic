@@ -97,8 +97,10 @@ function getPage(unpagedText, pageNumber) {
 	//console.log("********************************************************************** HELLO IS IT BRIE YOU'RE LOOKING FOR? ");	
 	//console.log("************************************************************ " + unpagedText.replace(["^A-Za-z0-9@$_\/.,\"():;\-=+&%#!?<>' \n]","");
 	unpagedText = unpagedText.replace("\n", " ");
-	var smsLength = 142;
-	return  unpagedText.substr(pageNumber * smsLength, smsLength);
+	var smsLength = 125;
+	var newSMSText = unpagedText.substr(pageNumber * smsLength, smsLength);
+	newSMSText = newSMSText + "\nReply M for more"
+	return newSMSText;
 }
 
 function getReadMe(gitRefs, page) {
