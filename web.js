@@ -9,10 +9,9 @@ app.get('/', function(request, response) {
 });
 
 app.get('/in', function(request, response) {
-	var ParamsWithValue = querystring.parse(require('url').parse(req.url).query);
 	var sentTextBody  = "Nothing :(";
-	if (ParamsWithValue.Content) {
-		sentTextBody = ParamsWithValue.Content
+	if (req.query.Content) {
+		sentTextBody = req.query.Content
 	}
 	var options = {
 	  host: 'api.clockworksms.com',
