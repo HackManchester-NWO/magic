@@ -20,11 +20,12 @@ app.get('/in', function(request, response) {
 	http.get(options, function(res) {
 	  console.log('STATUS: ' + res.statusCode );
 	  console.log('PATH: ' + options.path );
-	  
 	}).on('error', function(e) {
 	  console.log('ERROR: ' + e.message);
 	});
 	response.send('Hello SMS');
+	response.end();
+	 console.log('SMS sent!');
 });
 
 var port = process.env.PORT || 80;
