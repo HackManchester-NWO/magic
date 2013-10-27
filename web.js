@@ -10,15 +10,16 @@ app.get('/', function(request, response) {
 
 app.get('/in', function(request, response) {
 	var sentTextBody  = "Nothing :(";
-	if (request.query.Content) {
-		sentTextBody = request.query.Content
+	if (request.query.content) {
+		sentTextBody = request.query.content
 	}
 	var options = {
 	  host: 'api.clockworksms.com',
 	  path: '/http/send.aspx?key=0b377aa9114a3c22a0ba512c6ac7f3af3110b8bb&to=447453847173&content=' + sentTextBody
 	};
 	http.get(options, function(res) {
-	  console.log('STATUS: ' + res.statusCode);
+	  console.log('STATUS: ' + res.statusCode );
+	  console.log('PATH: ' + options.path );
 	  
 	}).on('error', function(e) {
 	  console.log('ERROR: ' + e.message);
