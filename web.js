@@ -36,8 +36,8 @@ app.get('/in', function(request, response) {
 									
 				});
 				response.on("end", function() {
-					var thisPage = getPage(chuckString, 6);
-					console.log("getting paged text : " + getPage(chuckString, 6));
+					var thisPage = getPage(chuckString, 0);
+					console.log("getting paged text : " + getPage(chuckString, 0));
 					var sendSMSUrl = '/http/send.aspx?key=0b377aa9114a3c22a0ba512c6ac7f3af3110b8bb&to=447453847173&content=' + encodeURIComponent(thisPage);
 					var options = {
 						host: 'api.clockworksms.com', 
